@@ -1,0 +1,19 @@
+name: Build Mission MIZ File
+on: [workflow_dispatch]
+
+jobs:
+  zip:
+    name: Checkout and Upload MIZ Directory
+    runs-on: ubuntu-latest
+    steps:
+    
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            miz-directory
+            
+      - name: Upload miz
+        uses: actions/upload-artifact@v3
+        with:
+          name: mission-${{ github.sha }}
+          path: miz-directory
