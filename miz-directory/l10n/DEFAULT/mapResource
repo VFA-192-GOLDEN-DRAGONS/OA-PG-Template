@@ -1,3 +1,5 @@
 mapResource = 
 {
+    ["ResKey_Action_6"] = "Moose_.lua",
+    ["ResKey_Action_9"] = "OA_CarrierGroups.lua",
 } -- end of mapResource
